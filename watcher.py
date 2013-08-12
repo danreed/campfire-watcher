@@ -73,9 +73,9 @@ def watcher(watch_for=[], check_interval=5):
         sleep(check_interval)
 
 
-# do stuff
-if len(watch_for) > 0:
-    print '\n\nWatching for: %s\n\n' % ', '.join(watch_for)
-    watcher(watch_for, check_interval)
-else:
-    print '\n\nI am not watching for anything. So I\'m stopping\n\n'
+if __name__ == '__main__':
+    if len(watch_for) > 0:
+        print '\n\nWatching for: %s\n\n' % ', '.join(watch_for)
+        watcher(watch_for, check_interval)
+    else:
+        print '\n\nI am not watching for anything. So I\'m stopping\n\n'
